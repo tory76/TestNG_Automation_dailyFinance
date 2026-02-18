@@ -16,5 +16,12 @@ dependencies {
 
     // Source: https://mvnrepository.com/artifact/org.testng/testng
     testImplementation("org.testng:testng:7.11.0")
+
+
+    // Source: https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    implementation("com.github.javafaker:javafaker:1.0.2")
+
+    // Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
 }
 
