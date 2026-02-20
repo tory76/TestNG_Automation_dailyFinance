@@ -1,5 +1,6 @@
 package utils;
 
+import Config.UserModel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,17 +23,19 @@ public class Utils {
 //        System.out.println(generateRandomNumber(10,90));
 //    }
 
-    public static void saveJSONDATA(String firstName, String email, String password, String phoneNum) throws IOException, ParseException {
+    public static void saveJSONDATA(UserModel userModel) throws IOException, ParseException {
 
         String filepath = "./src/test/resources/Users.json";
 
         JSONParser jsonParser = new JSONParser();
         JSONArray jsonArray= (JSONArray) jsonParser.parse(new FileReader(filepath));
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("firstname",firstName);
-        jsonObject.put("Email",email);
-        jsonObject.put("Password",password);
-        jsonObject.put("PhoneNumber",phoneNum);
+        jsonObject.put("firstname",userModel.getFirstName());
+        jsonObject.put("Lastname",userModel.getLastName());
+        jsonObject.put("Email",userModel.getEmail());
+        jsonObject.put("Password",userModel.getPassword());
+        jsonObject.put("PhoneNumber",userModel.getPhoneNum());
+        jsonObject.put("Address",userModel.getAddress());
 
         jsonArray.add(jsonObject);
 
