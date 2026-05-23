@@ -33,7 +33,7 @@ public class AdminLoginTest extends Setup{
 
 
 
-        Thread.sleep(2000);
+        Thread.sleep(10000);
 
     }
 

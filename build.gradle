@@ -47,6 +47,12 @@ test{
         suites "src/test/resources/suite.xml"
     }
 
+    testLogging {
+        events "passed", "failed", "skipped", "standard_out"
+        showStandardStreams = true
+    }
+
 
 }
+
 
