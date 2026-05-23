@@ -24,7 +24,7 @@ dependencies {
     // Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
     implementation("com.googlecode.json-simple:json-simple:1.1.1")
 
-    implementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
+
 
 }
 
@@ -46,5 +46,7 @@ test{
 
         suites "src/test/resources/suite.xml"
     }
+
+
 }
 
