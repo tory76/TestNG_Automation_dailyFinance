@@ -77,3 +77,9 @@ public class Utils {
 
 
 }
+
+//gradle clean test -Pemail="admin@test.com" -Ppassword="admin123" -Psuite="smokesuite.xml"
+//allure generate allure-results --clean -output
+//allure serve allure-results
+//allure serve allure-results --port 8001
+//allure serve allure-results -p 8001

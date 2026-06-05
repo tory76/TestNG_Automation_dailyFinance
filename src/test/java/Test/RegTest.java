@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class RegTest extends Setup {
 
-    @Test (priority = 1, description="verify that user only fill up mandatory fields")
+    @Test (priority = 1, description="verify that user only fill up mandatory fields" , groups = "smoke")
     public void MandatoryuserReg() throws IOException, ParseException, InterruptedException {
 
 

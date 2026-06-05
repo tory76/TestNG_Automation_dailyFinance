@@ -32,8 +32,8 @@ public class Logintest extends Setup {
 
     }
 
-    @Test (priority=2,description = "verify that user login with valid creds")
-    public void userLogin() throws IOException, ParseException {
+    @Test (priority=2,description = "verify that user login with valid creds", groups ="smoke")
+    public void userLogin() throws IOException, ParseException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         JSONObject userobj = Utils.readJSONdata("./src/test/resources/Users.json");
         loginPage.doLogin(userobj.get("Email").toString(),userobj.get("Password").toString());
@@ -52,6 +52,8 @@ public class Logintest extends Setup {
 
         softAssert.assertAll();
 
+        Thread.sleep(10000);
+
 
        // Soft Assertion executes all assertion , hard assertion if fails,then do not continue next assertions.
     }
@@ -64,6 +66,9 @@ public class Logintest extends Setup {
 
 
      }
+
+
+
 
 
 

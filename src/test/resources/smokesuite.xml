@@ -3,6 +3,14 @@
 <suite name="Daily Finance Test">
     <test name ="User Reg">
 
+        <groups>
+            <run>
+                <include name = "smoke">
+
+                </include>
+            </run>
+        </groups>
+
         <classes>
             <class name="Test.RegTest">
 
@@ -14,6 +22,14 @@
 
     <test name ="User Login">
 
+        <groups>
+            <run>
+                <include name = "smoke">
+
+                </include>
+            </run>
+        </groups>
+
         <classes>
             <class name="Test.Logintest">
 
@@ -24,6 +40,14 @@
 
     <test name ="Add Items">
 
+        <groups>
+            <run>
+                <include name = "smoke">
+
+                </include>
+            </run>
+        </groups>
+
         <classes>
             <class name="Test.DashboardTest">
 
@@ -32,15 +56,15 @@
 
     </test>
 
-    <test name ="Reset Password">
+<!-- <test name ="Reset Password">-->
 
-        <classes>
-            <class name="Test.ResetPasswordTest">
+<!--        <classes>-->
+<!--            <class name="Test.ResetPasswordTest">-->
 
-            </class>
-        </classes>
+<!--            </class>-->
+<!--        </classes>-->
 
-    </test>
+<!--    </test>-->
 
 
     <test name ="Admin Login">

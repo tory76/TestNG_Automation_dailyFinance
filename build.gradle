@@ -24,7 +24,7 @@ dependencies {
     // Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
     implementation("com.googlecode.json-simple:json-simple:1.1.1")
 
-
+    implementation 'io.qameta.allure:allure-testng:2.34.0'
 
 }
 
@@ -44,7 +44,12 @@ test{
 
         }
 
-        suites "src/test/resources/suite.xml"
+        if (project.hasProperty("suite")){
+
+            systemProperties.put("suite",project.property("suite"))
+        }
+
+          suites "src/test/resources/"+project.property("suite")
     }
 
     testLogging {

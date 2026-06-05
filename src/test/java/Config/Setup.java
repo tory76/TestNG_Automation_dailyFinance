@@ -12,7 +12,7 @@ public class Setup {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeTest (groups = "smoke")
     public void setup() {
 
         driver = new ChromeDriver();
@@ -22,7 +22,7 @@ public class Setup {
         driver.get("https://dailyfinance.roadtocareer.net/");
     }
 
-    @AfterTest
+    @AfterTest (groups = "smoke")
     public void teardown() {
 
         driver.quit();
