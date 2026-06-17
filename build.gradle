@@ -26,6 +26,8 @@ dependencies {
 
     implementation 'io.qameta.allure:allure-testng:2.34.0'
 
+    testImplementation("io.rest-assured:rest-assured:6.0.0")
+
 }
 
 
@@ -44,12 +46,12 @@ test{
 
         }
 
-        if (project.hasProperty("suite")){
+       if (project.hasProperty("suite")){
 
-            systemProperties.put("suite",project.property("suite"))
-        }
+           systemProperties.put(suite,project.property("suite"))
+       }
 
-          suites "src/test/resources/"+project.property("suite")
+        //suite "./src/test/resources/"+project.property("suite")
     }
 
     testLogging {

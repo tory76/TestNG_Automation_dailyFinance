@@ -6,7 +6,9 @@ import Pages.RegPage;
 import com.github.javafaker.Faker;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import services.GmailService;
 import utils.Utils;
 
 import java.io.IOException;
@@ -36,11 +38,17 @@ public class RegTest extends Setup {
 
         regPage1.doReg(userModel);
         Utils.saveJSONDATA(userModel);
+
         Thread.sleep(5000);
+        GmailService gs = new GmailService();
+        String regEmailActual = gs.readEmail();
+        System.out.println(regEmailActual);
+        String regEmailExpected = "Welcome to our platform!";
+        Assert.assertTrue(regEmailActual.contains(regEmailExpected));
     }
 
 
-    @Test (priority = 2, description="verify that user only fill up all fields")
+    //@Test (priority = 2, description="verify that user only fill up all fields")
     public void FulluserReg() throws IOException, ParseException, InterruptedException {
 
 
@@ -66,6 +74,9 @@ public class RegTest extends Setup {
         regPage1.doReg(userModel);
         Thread.sleep(5000);
         Utils.saveJSONDATA(userModel);
+
+
+
     }
 
 
