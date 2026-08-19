@@ -31,35 +31,60 @@ dependencies {
 }
 
 
-test{
+//test{
+//
+//    useTestNG(){
+//
+//        if (project.hasProperty("email") && project.hasProperty("password"))
+//
+//        {
+//            systemProperties.put("email",project.property("email"))
+//            systemProperties.put("password",project.property("password"))
+//
+//            print(project.property("email"))
+//            print(project.property("password"))
+//
+//        }
+//
+////       if (project.hasProperty("suite")){
+////
+////           systemProperties.put(suite,project.property("suite"))
+////       }
+//
+//        suites "./src/test/resources/" + project.property("suite")
+//    }
+//
+//    testLogging {
+//        events "passed", "failed", "skipped", "standard_out"
+//        showStandardStreams = true
+//    }
 
-    useTestNG(){
 
-        if (project.hasProperty("email") && project.hasProperty("password"))
+    test {
 
-        {
-            systemProperties.put("email",project.property("email"))
-            systemProperties.put("password",project.property("password"))
+        useTestNG() {
 
-            print(project.property("email"))
-            print(project.property("password"))
+            if (project.hasProperty("email") && project.hasProperty("password")) {
+
+                systemProperty "email", project.property("email")
+                systemProperty "password", project.property("password")
+
+                println project.property("email")
+                println project.property("password")
+            }
+
+            if (project.hasProperty("suite")) {
+                suites "./src/test/resources/" + project.property("suite")
+            }
 
         }
 
-       if (project.hasProperty("suite")){
-
-           systemProperties.put(suite,project.property("suite"))
-       }
-
-        //suite "./src/test/resources/"+project.property("suite")
-    }
-
-    testLogging {
-        events "passed", "failed", "skipped", "standard_out"
-        showStandardStreams = true
+        testLogging {
+            events "passed", "failed", "skipped", "standard_out"
+            showStandardStreams = true
+        }
     }
 
 
-}
 
 
