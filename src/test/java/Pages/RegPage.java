@@ -44,7 +44,7 @@ public class RegPage {
     public WebDriver driver;
 
     public RegPage(WebDriver driver){
-
+        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 

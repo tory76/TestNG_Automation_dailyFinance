@@ -45,3 +45,4 @@ bin/
 
 allure-report
 allure-results
+src/test/resources/config.properties

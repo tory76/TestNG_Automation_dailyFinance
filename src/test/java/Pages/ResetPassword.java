@@ -32,11 +32,17 @@ public class ResetPassword {
         //btnSendResetLink.click();
     //}
 
+
+
     public void resetPassword(String email){
 
+        txtEmail.click();
         txtEmail.clear();
         txtEmail.sendKeys(email);
         btnSendResetLink.click();
+
+// Verify the field contains only the intended value
+        System.out.println("Email field value: " + txtEmail.getAttribute("value"));
         //enterEmail(email);
         //clickSendResetLink();
     }
