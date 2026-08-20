@@ -35,3 +35,11 @@ allure serve allure-results
 ```
 
 The Allure report helps to easily analyze the automation test results and identify passed, failed, broken, or skipped test cases.
+
+
+## Test Cases
+
+The standard manual test cases for this automation project, including positive and negative test scenarios, are available here:
+
+https://docs.google.com/spreadsheets/d/1k0dQ6SwiAG9tR9RhpnfNf0z6ETeQXfyXOQBxhdltXk8/edit?usp=sharing
+
